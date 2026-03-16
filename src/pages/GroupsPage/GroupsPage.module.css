@@ -1,8 +1,9 @@
-.container {
+.groups-page {
   max-width: 1200px;
+  margin: 0 auto;
 }
 
-.title {
+.groups-page__title {
   padding-bottom: 12px;
   border-bottom: 1px solid #d1d5da;
   margin-bottom: 24px;
@@ -11,13 +12,13 @@
   font-weight: 600;
 }
 
-.grid {
+.groups-page__grid {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 
-.card {
+.groups-page__card {
   padding: 20px;
   border: 1px solid #e1e4e8;
   border-radius: 6px;
@@ -30,20 +31,20 @@
     box-shadow 0.15s ease-out;
 }
 
-.card:hover {
+.groups-page__card:hover {
   box-shadow:
     0 4px 8px rgb(0 0 0 / 8%),
     0 3px 6px rgb(0 0 0 / 10%);
   transform: translateY(-4px);
 }
 
-.cardTitle {
+.groups-page__card-title {
   margin: 0 0 10px;
   color: #0366d6;
   font-size: 16px;
 }
 
-.cardDesc {
+.groups-page__card-desc {
   min-height: 38px;
   margin-bottom: 20px;
   color: #586069;
@@ -51,14 +52,14 @@
   line-height: 1.5;
 }
 
-.cardFooter {
+.groups-page__card-footer {
   display: flex;
   justify-content: flex-end;
   padding-top: 16px;
   border-top: 1px solid #f1f1f1;
 }
 
-.editButton {
+.groups-page__edit-button {
   padding: 6px 12px;
   border: 1px solid rgb(27 31 35 / 15%);
   border-radius: 4px;
@@ -68,11 +69,12 @@
   font-size: 13px;
 }
 
-.editButton:hover {
+.groups-page__edit-button:hover {
   background: #f3f4f6;
 }
 
-.loader {
+.groups-page__loader {
+  margin-top: 40px;
   color: #6a737d;
   font-family: monospace;
   text-align: center;

@@ -1,11 +1,11 @@
-.container {
+.welcome-page {
   display: flex;
   max-width: 1200px;
   flex-direction: column;
   gap: 32px;
 }
 
-.hero {
+.welcome-page__hero {
   padding: 40px;
   border: 1px solid #d1d5da;
   border-left: 4px solid #0366d6;
@@ -13,14 +13,14 @@
   text-align: left;
 }
 
-.title {
+.welcome-page__title {
   margin: 0 0 12px;
   color: #24292e;
   font-size: 24px;
   font-weight: 600;
 }
 
-.subtitle {
+.welcome-page__subtitle {
   max-width: 700px;
   margin-bottom: 24px;
   color: #586069;
@@ -28,13 +28,13 @@
   line-height: 1.5;
 }
 
-.actions {
+.welcome-page__actions {
   display: flex;
   gap: 12px;
 }
 
-.primaryButton,
-.secondaryButton {
+.welcome-page__button--primary,
+.welcome-page__button--secondary {
   display: inline-flex;
   align-items: center;
   padding: 8px 16px;
@@ -45,33 +45,33 @@
   text-decoration: none;
 }
 
-.primaryButton {
+.welcome-page__button--primary {
   background-color: #2ea44f;
   color: #fff;
 }
 
-.primaryButton:hover {
+.welcome-page__button--primary:hover {
   background-color: #2c974b;
 }
 
-.secondaryButton {
+.welcome-page__button--secondary {
   border-color: rgb(27 31 35 / 15%);
   background-color: #fafbfc;
   color: #24292e;
 }
 
-.secondaryButton:hover {
+.welcome-page__button--secondary:hover {
   border-color: rgb(27 31 35 / 20%);
   background-color: #f3f4f6;
 }
 
-.features {
+.welcome-page__features {
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.featureCard {
+.welcome-page__feature-card {
   padding: 20px;
   border: 1px solid #e1e4e8;
   border-radius: 4px;
@@ -79,11 +79,11 @@
   transition: border-color 0.1s ease;
 }
 
-.featureCard:hover {
+.welcome-page__feature-card:hover {
   border-color: #0366d6;
 }
 
-.featureCard h3 {
+.welcome-page__feature-title {
   display: flex;
   align-items: center;
   margin: 0 0 8px;
@@ -92,7 +92,7 @@
   gap: 8px;
 }
 
-.featureCard p {
+.welcome-page__feature-desc {
   margin: 0;
   color: #586069;
   font-size: 13px;
@@ -101,7 +101,7 @@
 
 @media (width <= 768px) {
 
-  .features {
+  .welcome-page__features {
     grid-template-columns: 1fr;
   }
 }

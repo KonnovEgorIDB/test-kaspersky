@@ -2,16 +2,16 @@ import styles from './UserToolbar.module.css'
 
 const UserToolbar = ({ searchQuery, onSearchChange, onAddClick }) => {
   return (
-    <div className={styles.toolbar}>
+    <div className={styles['user-toolbar']}>
       <input
         type='text'
-        className={styles.searchInput}
+        className={styles['user-toolbar__search-input']}
         placeholder='Поиск по всем полям...'
         value={searchQuery}
         onChange={e => onSearchChange(e.target.value)}
       />
       <button
-        className={styles.addButton}
+        className={styles['user-toolbar__add-button']}
         onClick={onAddClick}
       >
         Добавить пользователя

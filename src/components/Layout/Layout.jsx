@@ -4,13 +4,14 @@ import styles from './Layout.module.css'
 
 const Layout = () => {
   return (
-    <div className={styles.appContainer}>
-      <nav className={styles.sidebar}>
-        <h2 className={styles.logo}>Kaspersky Панель</h2>
+    <div className={styles.app__container}>
+      <nav className={styles.app__sidebar}>
+        <h2 className={styles.app__logo}>Kaspersky Панель</h2>
+
         <NavLink
           to='/'
           className={({ isActive }) =>
-            isActive ? `${styles.link} ${styles.activeLink}` : styles.link
+            isActive ? `${styles.app__link} ${styles['app__link--active']}` : styles.app__link
           }
           end
         >
@@ -20,7 +21,7 @@ const Layout = () => {
         <NavLink
           to='/users'
           className={({ isActive }) =>
-            isActive ? `${styles.link} ${styles.activeLink}` : styles.link
+            isActive ? `${styles.app__link} ${styles['app__link--active']}` : styles.app__link
           }
         >
           Пользователи
@@ -29,15 +30,15 @@ const Layout = () => {
         <NavLink
           to='/groups'
           className={({ isActive }) =>
-            isActive ? `${styles.link} ${styles.activeLink}` : styles.link
+            isActive ? `${styles.app__link} ${styles['app__link--active']}` : styles.app__link
           }
         >
           Группы
         </NavLink>
       </nav>
 
-      <main className={styles.content}>
-        <Suspense fallback={<div className={styles.loader}>Загрузка страницы...</div>}>
+      <main className={styles.app__content}>
+        <Suspense fallback={<div className={styles.app__loader}>Загрузка страницы...</div>}>
           <Outlet />
         </Suspense>
       </main>

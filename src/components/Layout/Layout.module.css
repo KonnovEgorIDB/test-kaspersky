@@ -1,11 +1,11 @@
-.appContainer {
+.app__container {
   display: flex;
   min-height: 100vh;
   background-color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 }
 
-.sidebar {
+.app__sidebar {
   display: flex;
   width: 240px;
   flex-direction: column;
@@ -14,7 +14,7 @@
   background-color: #f6f8fa;
 }
 
-.logo {
+.app__logo {
   padding: 0 16px;
   margin-bottom: 24px;
   color: #24292e;
@@ -24,21 +24,22 @@
   text-transform: uppercase;
 }
 
-.link {
+.app__link {
   display: flex;
   align-items: center;
   padding: 8px 16px;
   color: #586069;
   font-size: 14px;
   text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
 }
 
-.link:hover {
+.app__link:hover {
   background-color: #ebf0f4;
   color: #24292e;
 }
 
-.activeLink {
+.app__link--active {
   position: relative;
   background-color: #fff;
   box-shadow: inset 2px 0 0 #0366d6;
@@ -46,14 +47,14 @@
   font-weight: 600;
 }
 
-.content {
+.app__content {
   flex-grow: 1;
   padding: 24px 32px;
   background-color: #fff;
   overflow-y: auto;
 }
 
-.loader {
+.app__loader {
   margin-top: 100px;
   color: #6a737d;
   font-family: monospace;

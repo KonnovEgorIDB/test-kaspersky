@@ -1,4 +1,9 @@
-.container h2 {
+.user-list-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.user-list-page__title {
   padding-bottom: 12px;
   border-bottom: 1px solid #e1e4e8;
   margin-top: 0;
@@ -8,7 +13,7 @@
   font-weight: 600;
 }
 
-.loader {
+.user-list-page__loader {
   display: flex;
   height: 300px;
   align-items: center;

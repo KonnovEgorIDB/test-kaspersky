@@ -27,11 +27,12 @@ const UserListPage = () => {
     setSortConfig({ key, direction })
   }
 
-  if (isLoading) return <div className={styles.loader}>Синхронизация данных...</div>
+  if (isLoading)
+    return <div className={styles['user-list-page__loader']}>Синхронизация данных...</div>
 
   return (
-    <div className={styles.container}>
-      <h2>Список пользователей</h2>
+    <div className={styles['user-list-page']}>
+      <h2 className={styles['user-list-page__title']}>Список пользователей</h2>
 
       <UserToolbar
         searchQuery={searchQuery}

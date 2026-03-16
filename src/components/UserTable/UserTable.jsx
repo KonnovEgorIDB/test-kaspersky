@@ -7,8 +7,8 @@ const UserTable = ({ users, sortConfig, onSort, onDelete }) => {
   }
 
   return (
-    <div className={styles.tableWrapper}>
-      <table className={styles.table}>
+    <div className={styles['user-table__wrapper']}>
+      <table className={styles['user-table__table']}>
         <thead>
           <tr>
             <th onClick={() => onSort('fullName')}>Полное имя {getSortIcon('fullName')}</th>
@@ -26,12 +26,14 @@ const UserTable = ({ users, sortConfig, onSort, onDelete }) => {
               <td>{user.account}</td>
               <td>{user.email}</td>
               <td>
-                <span className={styles.groupBadge}>{user.group || 'Unmanaged'}</span>
+                <span className={styles['user-table__group-badge']}>
+                  {user.group || 'Unmanaged'}
+                </span>
               </td>
               <td>{user.phone}</td>
               <td>
                 <button
-                  className={styles.deleteButton}
+                  className={styles['user-table__delete-button']}
                   onClick={() => onDelete(user.id)}
                 >
                   Удалить
@@ -43,7 +45,7 @@ const UserTable = ({ users, sortConfig, onSort, onDelete }) => {
             <tr>
               <td
                 colSpan='6'
-                className={styles.noData}
+                className={styles['user-table__no-data']}
               >
                 Пользователи не найдены
               </td>

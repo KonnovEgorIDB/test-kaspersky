@@ -14,15 +14,8 @@ const UserModal = ({ isOpen, onClose, onAddUser, groups }) => {
 
   useEffect(() => {
     if (!isOpen) return
-
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    setFormData({
-      fullName: '',
-      account: '',
-      email: '',
-      group: '',
-      phone: ''
-    })
+    setFormData(emptyForm)
   }, [isOpen])
 
   if (!isOpen) return null
@@ -50,21 +43,19 @@ const UserModal = ({ isOpen, onClose, onAddUser, groups }) => {
   }
 
   const handleOverlayClick = e => {
-    if (e.target === e.currentTarget) {
-      onClose()
-    }
+    if (e.target === e.currentTarget) onClose()
   }
 
   return (
     <div
-      className={styles.overlay}
+      className={styles['user-modal__overlay']}
       onClick={handleOverlayClick}
     >
-      <div className={styles.modal}>
-        <div className={styles.header}>
-          <h2>Добавить пользователя</h2>
+      <div className={styles['user-modal__window']}>
+        <div className={styles['user-modal__header']}>
+          <h2 className={styles['user-modal__title']}>Добавить пользователя</h2>
           <button
-            className={styles.closeBtn}
+            className={styles['user-modal__close']}
             onClick={onClose}
           >
             &times;
@@ -73,9 +64,9 @@ const UserModal = ({ isOpen, onClose, onAddUser, groups }) => {
 
         <form
           onSubmit={handleSubmit}
-          className={styles.form}
+          className={styles['user-modal__form']}
         >
-          <div className={styles.formGroup}>
+          <div className={styles['user-modal__form-group']}>
             <label>Полное имя *</label>
             <input
               type='text'
@@ -87,7 +78,7 @@ const UserModal = ({ isOpen, onClose, onAddUser, groups }) => {
             />
           </div>
 
-          <div className={styles.formGroup}>
+          <div className={styles['user-modal__form-group']}>
             <label>Учетная запись</label>
             <input
               type='text'
@@ -98,7 +89,7 @@ const UserModal = ({ isOpen, onClose, onAddUser, groups }) => {
             />
           </div>
 
-          <div className={styles.formGroup}>
+          <div className={styles['user-modal__form-group']}>
             <label>Email *</label>
             <input
               type='email'
@@ -110,7 +101,7 @@ const UserModal = ({ isOpen, onClose, onAddUser, groups }) => {
             />
           </div>
 
-          <div className={styles.formGroup}>
+          <div className={styles['user-modal__form-group']}>
             <label>Группа</label>
             <select
               name='group'
@@ -130,7 +121,7 @@ const UserModal = ({ isOpen, onClose, onAddUser, groups }) => {
             </select>
           </div>
 
-          <div className={styles.formGroup}>
+          <div className={styles['user-modal__form-group']}>
             <label>Телефон</label>
             <input
               type='tel'
@@ -141,17 +132,17 @@ const UserModal = ({ isOpen, onClose, onAddUser, groups }) => {
             />
           </div>
 
-          <div className={styles.footer}>
+          <div className={styles['user-modal__footer']}>
             <button
               type='button'
-              className={styles.cancelBtn}
+              className={styles['user-modal__cancel']}
               onClick={onClose}
             >
               Отмена
             </button>
             <button
               type='submit'
-              className={styles.submitBtn}
+              className={styles['user-modal__submit']}
             >
               Добавить
             </button>
