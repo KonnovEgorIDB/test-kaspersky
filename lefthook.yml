@@ -2,12 +2,12 @@ pre-commit:
   commands:
     lint-and-format-js:
       glob: '*.{js,jsx}'
-      run: npx eslint {staged_files} --fix && npx prettier --write {staged_files} && git add {staged_files}
+      run: npm run lint:fix && npm run format && git add {staged_files}
 
     lint-css:
       glob: '*.css'
-      run: npx stylelint {staged_files} --config .stylelintrc.cjs --fix --allow-empty-input && git add {staged_files}
+      run: npm run lint:css && git add {staged_files}
 
     format-other:
       glob: '*.{html,json}'
-      run: npx prettier --write {staged_files} && git add {staged_files}
+      run: npm run format && git add {staged_files}

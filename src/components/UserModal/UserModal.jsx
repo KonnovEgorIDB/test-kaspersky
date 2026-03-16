@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import styles from './UserModal.module.css'
 
 const emptyForm = {
@@ -11,12 +11,6 @@ const emptyForm = {
 
 const UserModal = ({ isOpen, onClose, onAddUser, groups }) => {
   const [formData, setFormData] = useState(emptyForm)
-
-  useEffect(() => {
-    if (!isOpen) return
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setFormData(emptyForm)
-  }, [isOpen])
 
   if (!isOpen) return null
 

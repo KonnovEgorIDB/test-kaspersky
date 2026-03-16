@@ -13,6 +13,7 @@ const UserListPage = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [sortConfig, setSortConfig] = useState({ key: 'fullName', direction: 'asc' })
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [modalKey, setModalKey] = useState(0)
 
   const processedUsers = useMemo(() => {
     const filtered = users.filter(user =>
@@ -27,6 +28,11 @@ const UserListPage = () => {
     setSortConfig({ key, direction })
   }
 
+  const handleOpen = () => {
+    setModalKey(k => k + 1)
+    setIsModalOpen(true)
+  }
+
   if (isLoading)
     return <div className={styles['user-list-page__loader']}>Синхронизация данных...</div>
 
@@ -37,7 +43,7 @@ const UserListPage = () => {
       <UserToolbar
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
-        onAddClick={() => setIsModalOpen(true)}
+        onAddClick={handleOpen}
       />
 
       <UserTable
@@ -48,6 +54,7 @@ const UserListPage = () => {
       />
 
       <UserModal
+        key={modalKey}
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         onAddUser={addUser}
