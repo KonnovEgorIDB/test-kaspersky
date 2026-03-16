@@ -1,0 +1,22 @@
+.container h2 {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e1e4e8;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #24292e;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.loader {
+  display: flex;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e1e4e8;
+  border-radius: 2px;
+  background-color: #fafbfc;
+  color: #6a737d;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-size: 13px;
+}

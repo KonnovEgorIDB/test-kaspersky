@@ -1,0 +1,79 @@
+.container {
+  max-width: 1200px;
+}
+
+.title {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d1d5da;
+  margin-bottom: 24px;
+  color: #24292e;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow:
+    0 1px 3px rgb(0 0 0 / 6%),
+    0 1px 2px rgb(0 0 0 / 12%);
+  transition:
+    transform 0.15s ease-out,
+    box-shadow 0.15s ease-out;
+}
+
+.card:hover {
+  box-shadow:
+    0 4px 8px rgb(0 0 0 / 8%),
+    0 3px 6px rgb(0 0 0 / 10%);
+  transform: translateY(-4px);
+}
+
+.cardTitle {
+  margin: 0 0 10px;
+  color: #0366d6;
+  font-size: 16px;
+}
+
+.cardDesc {
+  min-height: 38px;
+  margin-bottom: 20px;
+  color: #586069;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 16px;
+  border-top: 1px solid #f1f1f1;
+}
+
+.editButton {
+  padding: 6px 12px;
+  border: 1px solid rgb(27 31 35 / 15%);
+  border-radius: 4px;
+  background: #fafbfc;
+  color: #24292e;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.editButton:hover {
+  background: #f3f4f6;
+}
+
+.loader {
+  color: #6a737d;
+  font-family: monospace;
+  text-align: center;
+}
